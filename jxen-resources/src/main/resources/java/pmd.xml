@@ -18,67 +18,67 @@ specific language governing permissions and limitations
 under the License.
 -->
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	name="Default Maven PMD Plugin Ruleset"
-	xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
-	xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+  name="Default Maven PMD Plugin Ruleset"
+  xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+  xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
 
-	<description>
-		The default ruleset used by the JXen projects
-	</description>
+  <description>
+    The default ruleset used by the JXen projects
+  </description>
 
-	<rule ref="category/java/bestpractices.xml">
-		<exclude name="AccessorClassGeneration"/>
-		<exclude name="AccessorMethodGeneration"/>
-		<exclude name="UseVarargs"/>
-	</rule>
+  <rule ref="category/java/bestpractices.xml">
+    <exclude name="AccessorClassGeneration"/>
+    <exclude name="AccessorMethodGeneration"/>
+    <exclude name="UseVarargs"/>
+  </rule>
 
-	<rule ref="category/java/codestyle.xml">
-		<exclude name="AtLeastOneConstructor"/>
-		<exclude name="AvoidFinalLocalVariable"/>
-		<exclude name="CallSuperInConstructor"/>
-		<exclude name="ClassNamingConventions"/>
-		<exclude name="CommentDefaultAccessModifier"/>
-		<exclude name="DefaultPackage"/>
-		<exclude name="LocalVariableCouldBeFinal"/>
-		<exclude name="LongVariable"/>
-		<exclude name="MethodArgumentCouldBeFinal"/>
-		<exclude name="OnlyOneReturn"/>
-		<exclude name="ShortClassName"/>
-		<exclude name="ShortMethodName"/>
-		<exclude name="ShortVariable"/>
-		<exclude name="TooManyStaticImports"/>
-	</rule>
+  <rule ref="category/java/codestyle.xml">
+    <exclude name="AtLeastOneConstructor"/>
+    <exclude name="AvoidFinalLocalVariable"/>
+    <exclude name="CallSuperInConstructor"/>
+    <exclude name="ClassNamingConventions"/>
+    <exclude name="CommentDefaultAccessModifier"/>
+    <exclude name="DefaultPackage"/>
+    <exclude name="LocalVariableCouldBeFinal"/>
+    <exclude name="LongVariable"/>
+    <exclude name="MethodArgumentCouldBeFinal"/>
+    <exclude name="OnlyOneReturn"/>
+    <exclude name="ShortClassName"/>
+    <exclude name="ShortMethodName"/>
+    <exclude name="ShortVariable"/>
+    <exclude name="TooManyStaticImports"/>
+  </rule>
 
-	<rule ref="category/java/design.xml">
-		<exclude name="CyclomaticComplexity"/>
-		<exclude name="DataClass"/>
-		<exclude name="ExcessivePublicCount"/>
-		<exclude name="GodClass"/>
-		<exclude name="LawOfDemeter"/>
-		<exclude name="LoosePackageCoupling"/>
-		<exclude name="TooManyFields"/>
-		<exclude name="TooManyMethods"/>
-	</rule>
+  <rule ref="category/java/design.xml">
+    <exclude name="CyclomaticComplexity"/>
+    <exclude name="DataClass"/>
+    <exclude name="ExcessivePublicCount"/>
+    <exclude name="GodClass"/>
+    <exclude name="LawOfDemeter"/>
+    <exclude name="LoosePackageCoupling"/>
+    <exclude name="TooManyFields"/>
+    <exclude name="TooManyMethods"/>
+  </rule>
 
-	<rule ref="category/java/documentation.xml">
-		<exclude name="CommentRequired"/>
-		<exclude name="CommentSize"/>
-	</rule>
+  <rule ref="category/java/documentation.xml">
+    <exclude name="CommentRequired"/>
+    <exclude name="CommentSize"/>
+  </rule>
 
-	<rule ref="category/java/errorprone.xml">
-		<exclude name="AvoidFieldNameMatchingMethodName"/>
-		<exclude name="AvoidLiteralsInIfCondition"/>
-		<exclude name="BeanMembersShouldSerialize"/>
-		<exclude name="DataflowAnomalyAnalysis"/>
-	</rule>
+  <rule ref="category/java/errorprone.xml">
+    <exclude name="AvoidFieldNameMatchingMethodName"/>
+    <exclude name="AvoidLiteralsInIfCondition"/>
+    <exclude name="BeanMembersShouldSerialize"/>
+    <exclude name="DataflowAnomalyAnalysis"/>
+  </rule>
 
-	<rule ref="category/java/multithreading.xml">
-		<exclude name="UseConcurrentHashMap"/>
-	</rule>
+  <rule ref="category/java/multithreading.xml">
+    <exclude name="UseConcurrentHashMap"/>
+  </rule>
 
-	<rule ref="category/java/performance.xml">
-		<exclude name="AvoidInstantiatingObjectsInLoops"/>
-	</rule>
+  <rule ref="category/java/performance.xml">
+    <exclude name="AvoidInstantiatingObjectsInLoops"/>
+  </rule>
 
-	<rule ref="category/java/security.xml"/>
+  <rule ref="category/java/security.xml"/>
 </ruleset>
