@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.jxen.sdk</groupId>
   <artifactId>jxen-parent</artifactId>
-  <version>2</version>
+  <version>3</version>
   <packaging>pom</packaging>
   <url>https://github.com/jxen/jxen-sdk</url>
   <name>Java Xenon SDK Parent</name>
@@ -33,27 +33,29 @@
 
     <coverage>0.75</coverage>
 
-    <jxen-resources.version>2</jxen-resources.version>
-    <log4j.version>2.13.3</log4j.version>
-    <junit.version>5.7.0</junit.version>
-    <groovy.version>3.0.6</groovy.version>
-    <gmavenplus.version>1.11.0</gmavenplus.version>
+    <junit.version>5.7.2</junit.version>
+    <log4j.version>2.14.1</log4j.version>
 
-    <checkstyle-plugin.version>3.1.1</checkstyle-plugin.version>
+    <groovy.version>3.0.8</groovy.version>
+    <gmavenplus.version>1.12.1</gmavenplus.version>
+
+    <checkstyle-plugin.version>3.1.2</checkstyle-plugin.version>
     <deploy-plugin.version>3.0.0-M1</deploy-plugin.version>
-    <jacoco-plugin.version>0.8.6</jacoco-plugin.version>
+    <jacoco-plugin.version>0.8.7</jacoco-plugin.version>
     <jar-plugin.version>3.2.0</jar-plugin.version>
-    <javadoc-plugin.version>3.2.0</javadoc-plugin.version>
-    <pmd-plugin.version>3.13.0</pmd-plugin.version>
+    <javadoc-plugin.version>3.3.0</javadoc-plugin.version>
+    <pmd-plugin.version>3.14.0</pmd-plugin.version>
     <site-plugin.version>3.9.1</site-plugin.version>
     <source-plugin.version>3.2.1</source-plugin.version>
-    <spotbugs-plugin.version>4.1.4</spotbugs-plugin.version>
+    <spotbugs-plugin.version>4.2.3</spotbugs-plugin.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
 
-    <cobertura-plugin.version>2.7</cobertura-plugin.version>
+    <checkstyle.version>8.45</checkstyle.version>
+    <jxen-resources.version>3</jxen-resources.version>
+
     <jdepend-plugin.version>2.0</jdepend-plugin.version>
-    <jrx-plugin.version>3.0.0</jrx-plugin.version>
-    <project-info-reports-plugin.version>3.1.1</project-info-reports-plugin.version>
+    <jrx-plugin.version>3.1.1</jrx-plugin.version>
+    <project-info-reports-plugin.version>3.1.2</project-info-reports-plugin.version>
   </properties>
   <dependencies>
     <dependency>
@@ -297,6 +299,11 @@
             </executions>
             <dependencies>
               <dependency>
+                <groupId>com.puppycrawl.tools</groupId>
+                <artifactId>checkstyle</artifactId>
+                <version>${checkstyle.version}</version>
+              </dependency>
+              <dependency>
                 <groupId>com.github.jxen.sdk</groupId>
                 <artifactId>jxen-resources</artifactId>
                 <version>${jxen-resources.version}</version>
@@ -328,11 +335,6 @@
   </profiles>
   <reporting>
     <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <version>${cobertura-plugin.version}</version>
-      </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
