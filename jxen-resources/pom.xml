@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.jxen.sdk</groupId>
   <artifactId>jxen-resources</artifactId>
-  <version>3</version>
+  <version>4</version>
   <name>Java Xenon SDK Resources for build</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
