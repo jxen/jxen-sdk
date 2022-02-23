@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.jxen.sdk</groupId>
   <artifactId>jxen-parent</artifactId>
-  <version>4</version>
+  <version>5</version>
   <packaging>pom</packaging>
   <url>https://github.com/jxen/jxen-sdk</url>
   <name>Java Xenon SDK Parent</name>
@@ -34,28 +34,27 @@
     <coverage>0.75</coverage>
 
     <junit.version>5.8.2</junit.version>
-    <log4j.version>2.17.0</log4j.version>
+    <log4j.version>2.17.1</log4j.version>
 
     <groovy.version>3.0.9</groovy.version>
     <gmavenplus.version>1.13.1</gmavenplus.version>
 
     <checkstyle-plugin.version>3.1.2</checkstyle-plugin.version>
-    <deploy-plugin.version>3.0.0-M1</deploy-plugin.version>
+    <deploy-plugin.version>3.0.0-M2</deploy-plugin.version>
     <jacoco-plugin.version>0.8.7</jacoco-plugin.version>
-    <jar-plugin.version>3.2.0</jar-plugin.version>
-    <javadoc-plugin.version>3.3.1</javadoc-plugin.version>
-    <pmd-plugin.version>3.14.0</pmd-plugin.version>
-    <site-plugin.version>3.9.1</site-plugin.version>
+    <jar-plugin.version>3.2.2</jar-plugin.version>
+    <javadoc-plugin.version>3.3.2</javadoc-plugin.version>
+    <pmd-plugin.version>3.16.0</pmd-plugin.version>
+    <site-plugin.version>3.11.0</site-plugin.version>
     <source-plugin.version>3.2.1</source-plugin.version>
     <spotbugs-plugin.version>4.2.3</spotbugs-plugin.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
 
-    <checkstyle.version>9.2</checkstyle.version>
-    <jxen-resources.version>3</jxen-resources.version>
+    <checkstyle.version>9.3</checkstyle.version>
+    <jxen-resources.version>4</jxen-resources.version>
 
-    <jdepend-plugin.version>2.0</jdepend-plugin.version>
     <jrx-plugin.version>3.1.1</jrx-plugin.version>
-    <project-info-reports-plugin.version>3.1.2</project-info-reports-plugin.version>
+    <project-info-reports-plugin.version>3.2.1</project-info-reports-plugin.version>
   </properties>
   <dependencies>
     <dependency>
@@ -161,6 +160,16 @@
             <goals>
               <goal>prepare-agent</goal>
             </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>test</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/jacoco-report</outputDirectory>
+            </configuration>
           </execution>
           <execution>
             <id>check</id>
@@ -345,11 +354,6 @@
             </reports>
           </reportSet>
         </reportSets>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>jdepend-maven-plugin</artifactId>
-        <version>${jdepend-plugin.version}</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
