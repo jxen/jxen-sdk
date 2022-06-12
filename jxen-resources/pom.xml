@@ -11,14 +11,9 @@
   </properties>
   <distributionManagement>
     <repository>
-      <id>nexus</id>
-      <name>Nexus Releases Repository</name>
-      <url>${nexus-releases}</url>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/jxen/jxen-sdk</url>
     </repository>
-    <snapshotRepository>
-    <id>nexus</id>
-      <name>Nexus Snapshots Repository</name>
-      <url>${nexus-snapshots}</url>
-    </snapshotRepository>
   </distributionManagement>
 </project>
